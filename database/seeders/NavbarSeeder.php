@@ -21,8 +21,8 @@ class NavbarSeeder extends Seeder
                 'ordering' => 1,
             ],
             [
-                'name' => 'Products',
-                'route' => 'products.index',
+                'name' => 'Movies',
+                'route' => 'movies.index',
                 'ordering' => 2,
             ],
             [

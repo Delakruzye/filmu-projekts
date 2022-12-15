@@ -1,15 +1,25 @@
-body{margin-top:20px;}
+body{margin-top:15px;}
 .single-team .inner {
     text-align: center;
 	margin-bottom: 35px;
 	border: 1px solid #e5eaf0;
 	padding: 5px 5px 0px;
 }
-
 .single-team .inner .team-img {
 	position: relative;
 }
-
+.img {
+    float: left;
+    width:  100px;
+    height: 200px;
+    object-fit: cover;
+}
+#cover{
+    float: left;
+    object-fit: cover;
+	width:  210px;
+    height: 360px;
+}
 .single-team .inner .team-img img {
 	width: 100%;
 }
@@ -50,12 +60,55 @@ body{margin-top:20px;}
 	margin: 0 3px;
 	font-size: 16px;
 }
+/* .align {
+	margin-left: 50px;
+} */
+/* body {
+font-family: "Times New Roman", Times, serif;
+} */
 
-.team-social {
-	background: #f3f6fa;
-	width: 50%;
-	padding-top: 4px;
-	margin: auto;
-	border-radius: 15px 15px 0px 0px;
-	margin-top: 17px;
+#starlist {
+	margin-left: 28.5%;
 }
+.linkhover:hover {
+	color: #7d91aa;
+}
+
+/* #rolediv {
+    display: none;
+	background-color: rgb(78, 78, 78);
+	border: 10px;
+	border-color: white;
+	height: 200px;
+	width: 200px;
+	background-color: rgb(78, 78, 78);
+	z-index: 10;
+	position: absolute;
+}
+    
+#rolelink:hover + #rolediv {
+    display: block;
+} */
+.rolelink {
+	text-decoration: none;
+}
+.rolelink:hover {
+	text-decoration: underline;
+}
+#bio {
+	margin: 10px
+}
+#panel, #flip {
+	padding: 5px;
+	text-align: center;
+	background-color: #343434;
+	border: solid 1px #c3c3c3;
+  }
+  
+  #panel {
+	padding: 50px;
+	display: none;
+  }
+  #flip:hover {
+	color: #a4a3a3;
+  }
