@@ -13,12 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('film_actor_character', function (Blueprint $table) {
-            $table->string('movie_id');
-            $table->string('actor_id');
-            $table->foreign('movie_id')->references('actor_id')->on('actors')->onDelete('cascade');
-            $table->foreign('actor_id')->references('movie_id')->on('movies')->onDelete('cascade');
- });
+        Schema::create('review', function (Blueprint $table) {
+            $table->id();
+            $table->string('Film_Title');
+            $table->string('Review_Title');
+            $table->string('picurl');
+            $table->integer('filmyear');
+            $table->string('rating');
+            $table->text('description', 60000);
+            $table->timestamps();
+            
+        });
     }
 
     /**

@@ -16,8 +16,8 @@ class NavbarSeeder extends Seeder
     {
         $links = [
             [
-                'name' => 'Home',
-                'route' => 'home',
+                'name' => 'Actors',
+                'route' => 'actor',
                 'ordering' => 1,
             ],
             [
@@ -26,8 +26,8 @@ class NavbarSeeder extends Seeder
                 'ordering' => 2,
             ],
             [
-                'name' => 'About US',
-                'route' => 'about.us',
+                'name' => 'Reviews',
+                'route' => 'reviews',
                 'ordering' => 3,
             ]
         ];

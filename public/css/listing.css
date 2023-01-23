@@ -1,4 +1,11 @@
-body{margin-top:15px;}
+body {
+	margin-top:15px;
+	background-color: #25316D;
+	font-family: 'Poppins', sans-serif;
+	place-items: center;
+	color: #F1F6F5;
+}
+/* priekš filmju un aktieru bildēm, kārtīm, lielumi, fonti */
 .single-team .inner {
     text-align: center;
 	margin-bottom: 35px;
@@ -17,7 +24,7 @@ body{margin-top:15px;}
 #cover{
     float: left;
     object-fit: cover;
-	width:  210px;
+	width:  300px;
     height: 360px;
 }
 .single-team .inner .team-img img {
@@ -51,44 +58,48 @@ body{margin-top:15px;}
 	font-weight: 300;
 	font-size: 16px;
 	letter-spacing: 0.5px;
-	color: #7d91aa;
+	color: (#ffffff);
 }
 
-.single-team .inner .team-content a {
+.single-team .inner .team-content {
 	display: inline-block;
 	padding: 2px;
 	margin: 0 3px;
 	font-size: 16px;
 }
+
+.card-img-topp{
+	object-fit: cover;
+	border-radius: 3px;
+	width:  190px;
+    height: 180px;
+}
+
 /* .align {
 	margin-left: 50px;
 } */
-/* body {
-font-family: "Times New Roman", Times, serif;
-} */
-
-#starlist {
-	margin-left: 28.5%;
+body {
+font-family: 'Trebuchet MS', sans-serif;
 }
+/* Priekš hipersaitēm daizini */
 .linkhover:hover {
 	color: #7d91aa;
 }
 
-/* #rolediv {
-    display: none;
-	background-color: rgb(78, 78, 78);
-	border: 10px;
-	border-color: white;
-	height: 200px;
-	width: 200px;
-	background-color: rgb(78, 78, 78);
-	z-index: 10;
+.rolelink:hover + .actorpichover{
+    display: block;
+}
+.actorpichover{
+	display: none;
 	position: absolute;
 }
-    
-#rolelink:hover + #rolediv {
-    display: block;
-} */
+/* bildēm */
+#hoversize{
+	object-fit: cover;
+	border-radius: 3px;
+	width:  160px;
+    height: 200px;
+}
 .rolelink {
 	text-decoration: none;
 }
@@ -98,17 +109,129 @@ font-family: "Times New Roman", Times, serif;
 #bio {
 	margin: 10px
 }
-#panel, #flip {
-	padding: 5px;
-	text-align: center;
-	background-color: #343434;
-	border: solid 1px #c3c3c3;
-  }
   
-  #panel {
+#panel {
 	padding: 50px;
 	display: none;
   }
   #flip:hover {
 	color: #a4a3a3;
   }
+.maindiv {
+	width: 1200px;
+	/* align-content: center; */
+}
+/* navigācijas animācija */
+.nav1 {
+	background-color: #5F6F94;
+	line-height: 50px;
+}
+
+#navalign {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+}
+
+#ullist {
+	list-style: none;
+	display: flex;
+	gap: 25px;
+}
+
+#link {
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+}
+
+#link::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 4px;
+	scale: 0 1;
+	transform-origin: left;
+	transition: scale 0.25s;
+}
+
+#link:hover::before{
+	scale: 1;
+}	
+/* priekš rekomendācijām coveri, lielumi, attāumi */
+#rec{
+	background-color: #5F6F94;
+	width: 235px;
+	border:2px solid black;
+}
+.tcontainers{
+	margin-left: 4%;
+}
+#recpic{
+	object-fit: cover;
+	border-radius: 3px;
+	width:  200px;
+    height: 200px;
+}
+.recc{
+	text-decoration: none;
+}
+.parent {
+	text-align: center;
+  }
+/* priekš zvaigznēm */
+  .rate {
+	float: left;
+	height: 46px;
+	padding: 0 10px;
+  }
+  .rate:not(:checked) > input {
+	position:absolute;
+	top:-9999px;
+  }
+  .rate:not(:checked) > label {
+	float:right;
+	width:1em;
+	overflow:hidden;
+	white-space:nowrap;
+	cursor:pointer;
+	font-size:30px;
+	color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+	content: '★ ';
+  }
+  .rate > input:checked ~ label {
+	color: #ffc700;    
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+	color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+	color: #c59b08;
+  }
+
+  .star-rating {
+    color: #ffb900;
+}
+
+.star-rating i.filled {
+    color: #ffb900;
+}
+
+.star-rating i.empty {
+    color: #ddd;
+}
+
+.konteinets21{
+	max-height: 270px;
+}
